@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { ControlLabel, FormControl, FormGroup } from 'react-bootstrap';
-import Button from 'react-bootstrap/es/Button';
+import { Button, ControlLabel, FormControl, FormGroup } from 'react-bootstrap';
 
 class NewEntryForm extends Component {
     constructor(props) {
@@ -14,7 +13,7 @@ class NewEntryForm extends Component {
 
     onUsernameChange = (e) => this.setState({username: e.target.value});
     onTextChange = (e) => this.setState({text: e.target.value});
-    
+
     saveEntry = (e) => {
         e.preventDefault();
         this.props.onSave(this.state.username, this.state.text);
@@ -28,7 +27,6 @@ class NewEntryForm extends Component {
                   <FormControl
                     id="username"
                     type="text"
-                    label="somelabel"
                     value={this.state.username}
                     onChange={this.onUsernameChange}
                   />
