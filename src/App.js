@@ -36,7 +36,7 @@ class App extends Component {
 
     render() {
         const entries = this.state.entries.map(entry =>
-          <Entry key={entry.id} author={entry.author} text={entry.text}/>
+          <Entry key={entry.id} username={entry.username} text={entry.text}/>
         );
 
         const view = this.state.waiting ? (
